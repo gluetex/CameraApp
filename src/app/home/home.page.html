@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Image Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-card *ngFor="let image of images" class="cardItem">
+      <ion-card-content>
+        <img [src]="image.imageUrl" alt="Image">
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="cameraBtn">
+    <ion-button  size="large" (click)="captureImage()">
+      <ion-icon name="camera-outline" size="large"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
